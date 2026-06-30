@@ -12,7 +12,7 @@ load_dotenv()
 
 # Create the agent
 memory = InMemorySaver()
-model = ChatOpenAI(model="gpt-4o-mini")
+model = ChatOpenAI(model="gpt-5.4-mini")
 search = GoogleSerperAPIWrapper()
 tools = [
     Tool(
