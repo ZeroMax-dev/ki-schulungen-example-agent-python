@@ -27,4 +27,11 @@ python main.py
 ```
 
 The agent introduces itself, remembers facts across turns (same `thread_id`),
-and uses the `web-search` tool (Google via Serper) for current information.
+and uses the `web_search` tool (Google via Serper) for current information.
+
+`web_search` is a custom tool: a plain function decorated with `@tool` that
+calls the Serper API with `requests`. LangChain recommends writing small tools
+like this directly in your code; the old `langchain-community` package (which
+had `GoogleSerperAPIWrapper`) is being sunset.
+
+Docs: https://docs.langchain.com/oss/python/langchain/tools
